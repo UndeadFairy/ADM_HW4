@@ -33,10 +33,15 @@ The graph itself contains authors as nodes. Edges are created with weights accor
 Functions used for this part:
 
 data = loader([name of dataset])
+
 dictAuthor = Author(data)
+
 dictPubl = Publ(data)
+
 dictConf = Conf(data)
+
 Gall = createGraph(dictAuthor)
+
 Gall = addEdges(dictPubl)
 
 Also we can plot the graph, but since the graph is too big, this task is really slow. 
@@ -51,9 +56,13 @@ User needs to put the ID of the conference(e.g. *3052*). The selected ID is foun
 It also computes some statistics as degree, betweenness and closeness. These are then plotted on the log-log plots.
 
 Used functions:
+
 subgraph = Gall.subgraph(dictConf[a]) - create the subgraph according to the input
+
 degree(Gall) - compute and plot the degree rank plot
+
 closeness(Gall) - compute and plot the closeness rank plot
+
 betweeness(Gall) - compute and plot the betweenness rank plot
 
 #### 2b
@@ -73,9 +82,13 @@ This part computes shortest path between given nodes. For this exercise, we cann
 In our solution we used Dijkstra algorithm with priority queue. 
 
 To use a function: 
+
 dijkstra(graph, source, target)
+
 graph - specify the graph you want to use for calling the function
+
 source - the starting node
+
 target - the ending node
 
 The output of this function is a weighted path between the nodes.
@@ -90,6 +103,9 @@ TBD
 
 Python 3
 Packages:
+
 Networkx 1.1
+
 Matplotlib
+
 Heapq
