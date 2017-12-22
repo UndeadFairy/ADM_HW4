@@ -1,4 +1,4 @@
-# AMD Homework 4 - Group 3
+# AMD Homework 4 - Group 19
 
 This project is a part of a course Algorithmic Methods of Data Mining
 Aim of this project is to create a graph from a given dataset and visualize some interesting statistics. 
@@ -10,14 +10,14 @@ For our homework, we have two datasets:
 1. *reduced_dblp.json* - This file contains a reduced dataset, which was used for testing and creating a script.
 2. *full_dblp.json* - This is a full dataset for the final project. This file is not included in the Test folder because of its size.
 
-To change the desired dataset, simply rewrite the name of the file you want to use in the *Modules.py* on the line **183**.
+To change the desired dataset, simply rewrite the name of the file you want to use in the *Modules.py* on the line **230**.
 ### Data
 
 Reduced dataset is just a subset of the full data. Dataset contains the information about the conferences, publications and corresponding authors.
 
 ## To run a script:
 	
-Simply run *Modules.py* using Python in the command line in the folder with the dataset, or change the path to the desired file on the line **183**.
+Simply run *Modules.py* using Python in the command line in the folder with the dataset, or change the path to the desired file on the line **230**.
 
 ## Script description
 
@@ -96,7 +96,13 @@ The output of this function is a weighted path between the nodes.
 
 #### 3b
 
-TBD
+This part is computing the "Group number", which is in our case computed as a minimal distance between given node from the input list and each node from the graph.
+We use also Dijkstra algorithm for shortest path. To make it faster, first we check if the nodes are connected with the function from networkx package. Numbers as a input
+has to be inserted coma separated with no spaces. 
+
+Used functions:
+
+three_b(Gall, nodes_list) - this function requires as an input graph and list of nodes, we want to examine
 
 
 ### Requirements
